@@ -7,20 +7,31 @@
 //            /____/
 
 // Dog Constructor & Prototype
-function Dog (name, color, status, hungry, owner) {
+function Dog (name, color, status) {
   this.name = name;
   this.color = color;
   this.status = status;
-  this.hungry = hungry;
-  this.owner = owner;
-
 };
+
+function Sadie () {
+  this.status = 'normal'
+  this.color = 'black'
+  this.hungry = false;
+  this.owner = 'Mason';
+}
+
+function Moonshine () {
+  this.hungry = true;
+}
+
+Sadie.prototype = new Dog();
+Moonshine.prototype = new Dog();
 
 // Instances of Dog
 // Needed: sadie, moonshine, atticus
 
-let sadie = new Dog('Sadie', 'black', 'normal', false, 'Mason');
-let moonshine = new Dog('Moonshine', 'black', 'normal', true);
+let sadie = new Sadie();
+let moonshine = new Moonshine();
 let atticus = new Dog('Atticus');
 
 //     __
