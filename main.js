@@ -32,10 +32,10 @@ let atticus = new Dog('Atticus');
 // Human Constructor & Prototype
 function Human (name, cool) {
   this.name = name;
-  this.pet = function(dog){
+  this.pet = dog => {
     dog.status = 'happy';
   }
-  this.feed = function(dog){
+  this.feed = dog =>{
     dog.hungry = false;
   }
   this.cool = cool;
