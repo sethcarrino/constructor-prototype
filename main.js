@@ -10,12 +10,11 @@
 function Dog (name, color, status) {
   this.name = name;
   this.color = color;
-  this.status = status;
 };
 
 function Sadie () {
-  this.status = 'normal'
-  this.color = 'black'
+  this.status = 'normal';
+  this.color = 'black';
   this.hungry = false;
   this.owner = 'Mason';
 }
